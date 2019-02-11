@@ -140,7 +140,7 @@
    <!-- home/templates/dinner.html -->
    <h1>{{dinner}}</h1>
    ```
-
+![django](.\image\django.png)
 
 
 
