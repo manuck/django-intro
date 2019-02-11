@@ -141,4 +141,37 @@
    <h1>{{dinner}}</h1>
    ```
 
+
+
+
+
+## 4. Variable Routing
+
+------
+
+1. url 설정
+
+   ```python
+   path('home/you/<name>', views.you),
+   path('home/cube/<int:num>', views.cube),
+   ```
+
+2. view 파일 설정
+
+   ```python
+   def you(request, name):
+       return render(request, 'you.html', {'name': name})
+   
+   def cube(request, num):
+       result = num**3
+       return render(request, 'cube.html', {'num' : num, 'result':result})
+   ```
+
+3. 템플릿 파일 설정
+
+   ```django
+   <h1>{{name}}, 안녕!</h1>
+   <h1>{{num}}**3 = {{result}}</h1>
+   ```
+
    
