@@ -29,3 +29,11 @@ def ping(request):
 def pong(request):
     msg = request.GET.get('message')
     return render(request, 'pong.html', {'msg' : msg})
+    
+def user_new(request):
+    return render(request, 'user_new.html')
+
+def user_read(request):
+    idx = request.POST.get('name')
+    password = request.POST.get('password')
+    return render(request, 'user_read.html', {'id':idx, 'password':password})

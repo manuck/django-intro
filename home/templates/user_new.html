@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %} ping {% endblock %}
+{% block body %}
+<form action="/home/user_read/", method="POST">
+    {% csrf_token %}
+    <input type="text" name="name"><br>
+    <input type="password" name="password">
+    <input type="submit">
+</form>
+{% endblock %}
