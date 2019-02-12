@@ -63,6 +63,8 @@
 {% now "DATETIME_FORMAT" %}<br> <!-- 날짜 표기(시간포함) -->
 {% now "DATE_FORMAT" %}<br> <!-- 날짜 표기(시간제외) -->
 {% now "Y년 m월 d일 (D) h:i" %}<br> <!-- 날짜 표기 (요일도 표시) -->
+<hr>
+{{datetimenow|date:"SHORT_DATETIME_FORMAT"}}
 
 
 {{ 'http://google.com'|urlize }}
